@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Valentine's day</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.love-loader-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.love-text {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5rem;
+  color: #d81b60;
+  margin-top: 20px;
+  animation: fadeIn 2s infinite alternate;
+}
+
+.heart-loader {
+  width: 100px;
+  height: 100px;
+  background-color: #e91e63;
+  position: relative;
+  transform: rotate(-45deg);
+  animation: beat 1s infinite alternate ease-in-out;
+}
+
+.heart-loader:before,
+.heart-loader:after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: #e91e63;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart-loader:before {
+  top: -50px;
+  left: 0;
+}
+
+.heart-loader:after {
+  left: 50px;
+  top: 0;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-45deg);
+  }
+  100% {
+    transform: scale(1) rotate(-45deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

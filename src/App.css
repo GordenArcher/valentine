@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; 
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+
+#root {
+  margin: auto;
+  text-align: center;
+}
+
+.home, .ask_quest{
+  max-width: 500px;
+}
+
+.vide_display video, .ask_vide video{
+  width: 400px;
+  height: 500px;
+}
+
+.main, .hero{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero_txt{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.name_imput input{
+  width: 100%;
+  height: 45px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: transparent;
+  padding: 10px;
+  color: hsl(0, 0%, 0%);
+}
+
+.hero_btn button {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #725AC1;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #725AC1;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #725AC1;
+}
+
+.hero_btn button:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #725AC1;
+}
+
+.wrapper_ask{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main_ask{
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.options{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.opt button{
+  width: 100px;
+  height: 45px;
+  color: white; 
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.opt button:hover {
+  transform: scale(1.05); 
+}
+
+.opt button:active {
+  transform: scale(0.98);
+}
+
+.no button{
+  background: red;
+}
+
+.yes button{
+  background: green;
+}
+
+.happy_vid img{
+  animation: bounce 1s linear infinite ;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.celebration {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+.happy_mess{
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.smalll{
+  font-size: 1rem;
+  margin-top: 50px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400&display=swap');
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.not-found-title {
+  font-size: 8rem;
+  font-weight: bold;
+  color: #ff4d4d;
+  font-family: 'Playfair Display', serif;
+  animation: float 2s ease-in-out infinite;
+}
+
+.not-found-text {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.not-found-emoji {
+  font-size: 3rem;
+  margin: 10px 0;
+}
+
+.back-home {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #725AC1;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #725AC1;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #725AC1;
+}
+
+.back-home:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #725AC1;
+}
+
+.back-home button:active {
+  transform: scale(0.9);
+} 
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@media screen and (max-width: 768px) {
+  .home, .ask_quest {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .vide_display video, .ask_vide video {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero_txt {
+    font-size: 1.5rem;
+  }
+
+  .name_imput input {
+    font-size: 1rem;
+    height: 45px;
+  }
+
+  .hero_btn button {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+
+  .happy_vid img{
+    width: 80%;
+  }
+
+  .main_ask {
+    text-align: center;
+    font-size: .8rem;
+  }
+
+  .options {
+    gap: 15px;
+  }
+
+  .happy_mess {
+    font-size: 1.2rem;
+  }
+
+  .smalll{
+    font-size: .8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero_txt {
+    font-size: 1.3rem;
+  }
+
+  .name_imput input {
+    font-size: 0.9rem;
+    height: 45px;
+  }
+
+  .main_ask {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .happy_mess {
+    font-size: 1rem;
+  }
+}
